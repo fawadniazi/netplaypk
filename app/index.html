@@ -1,0 +1,257 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>netplaypk</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+    <link href="http://vjs.zencdn.net/5.0.2/video-js.css" rel="stylesheet">
+    <style>
+    body
+    {font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;}
+    a,body,div,h1,h2,h3,h4,h5,h6,p,span,td,tr {
+        font-family: 'Open Sans', sans-serif
+    }
+    
+    .navbar-header .navbar-brand {
+        color: #cc0000;
+        font-weight: 700;
+    }
+    
+    .navbar-brand:focus,
+    .navbar-brand:hover {
+        color: #121516;
+        background-color: transparent;
+    }
+    
+    .header {
+        margin-top: 35px;
+    }
+    
+    .row {
+        padding-bottom: 10px
+    }
+#player {
+    height: 100%
+}
+
+.video-js-responsive-container.vjs-hd {
+    padding-top: 56.25%
+}
+
+.video-js-responsive-container.vjs-sd {
+    padding-top: 75%
+}
+
+.video-js-responsive-container {
+    width: 100%;
+    position: relative
+}
+
+.video-js-responsive-container .video-js {
+    height: 100%!important;
+    width: 100%!important;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.right-bar-padding {
+    padding-left: 10px;
+}
+
+
+
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">NETPLAY</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">Video</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Popular <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">New</a></li>
+                            <li><a href="#">Top Rated</a></li>
+                            <li><a href="#">Most Commented</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Sponsered</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Special</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default ">Submit</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                   <!--  <li><a href="#">Link</a></li> -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row">
+    <div class="container" >
+        <!--   <div class="header">
+      <ul class="nav nav-pills pull-right">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <h3 class="text-muted">NETPLAY</h3>
+    </div> -->
+        <div class="col-xs-12 col-sm-8 col-md-8" style="background-color: #ffb466">
+
+        
+
+        <div id="player" class="video-js-responsive-container vjs-hd">
+            <video id="example_video_1" class="video-js vjs-default-skin" controls preload="none" poster="http://www.minerlabs.com/opta/VideoLoadingScreen.png" data-setup='{}'>
+                <source src="http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8" type="application/x-mpegURL">
+                <!-- Tracks need an ending tag thanks to IE9 -->
+                <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+            </video>
+            </div>
+              <a class="btn btn-social-icon btn-twitter">
+    <span class="fa fa-twitter"></span>
+  </a>
+            <h1>NETPLAY NOW !</h1>
+            <p class="lead">Watch it anywhere !</p>
+            <p><a class="btn btn-lg btn-success" href="#">Splendid! <span class="glyphicon glyphicon-heart"></span></a></p>
+        
+
+
+        </div>
+
+        <div class="col-xs-6 col-sm-4 col-md-4 right-bar-padding" style="background-color: #ffb466">
+        <div id="headline" style="padding:9px 14px; background-color: #f5f5f5">
+          <ol>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</li>
+            <li class="hidden-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</li>
+            <li class="hidden-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</li>
+          </ol>
+          </div>
+        </div>
+
+
+        </div>
+        </div>
+
+
+        <div class="row marketing">
+            <div class="col-lg-6">
+                <h4><a href="https://html5boilerplate.com/">HTML5 Boilerplate</a></h4>
+                <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
+                <h4><a href="http://libsass.org/">Sass</a></h4>
+                <p>Sass is a mature, stable, and powerful professional grade CSS extension language.</p>
+                <h4><a href="http://getbootstrap.com/">Bootstrap</a></h4>
+                <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
+                <h4><a href="http://modernizr.com/">Modernizr</a></h4>
+                <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
+            </div>
+        </div>
+        <div class="footer">
+            <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+        </div>
+    </div>
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js(.) scripts/plugins.js -->
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
+    <!-- endbuild -->
+
+    <script src="http://vjs.zencdn.net/ie8/1.1.0/videojs-ie8.min.js"></script>
+    <script src="http://vjs.zencdn.net/5.0.2/video.js"></script>
+    <script src="http://www.minerlabs.com/player-test/videojs.hls.min.js"></script> 
+
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+    (function(b, o, i, l, e, r) {
+        b.GoogleAnalyticsObject = l;
+        b[l] || (b[l] =
+            function() {
+                (b[l].q = b[l].q || []).push(arguments)
+            });
+        b[l].l = +new Date;
+        e = o.createElement(i);
+        r = o.getElementsByTagName(i)[0];
+        e.src = 'https://www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e, r)
+    }(window, document, 'script', 'ga'));
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
+    </script>
+</body>
+
+</html>
